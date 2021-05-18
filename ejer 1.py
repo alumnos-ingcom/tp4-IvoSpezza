@@ -1,5 +1,5 @@
 ################
-# Ivo Spezzacatena - @martinvilu
+# Ivo Spezzacatena - @IvoSpezza
 # Plantilla de ejercicio
 # UNRN Andina - Introducción a la Ingenieria en Computación
 ################
