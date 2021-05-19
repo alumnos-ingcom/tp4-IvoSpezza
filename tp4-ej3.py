@@ -37,9 +37,12 @@ def convertir_a_centigrados(fahrenheit):
     
     
 def prueba():
-    pass
-
+    eleccion = input("ingrese 1 para transformar centigrados en fahrenheit ingrese 2 para trasnformar fahrenheit en centigrados ")
+    if eleccion == "1":
+        convertir_a_fahrrenheit("")
+    elif eleccion == "2":
+        convertir_a_centigrados("")
+    
 if __name__ == "__main__":
     prueba()
-    convertir_a_fahrrenheit("")
-    convertir_a_centigrados("")
+    

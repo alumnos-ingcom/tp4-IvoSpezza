@@ -34,9 +34,9 @@ def suma_lenta(numero, otro_numero):
     print(f"{suma_lenta}")
     print("proceso terminado.")
 def prueba():
-    pass
+    suma_lenta("", "")
 
 if __name__ == "__main__":
     prueba()
-    suma_lenta("", "")
+    
     
