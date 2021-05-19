@@ -13,7 +13,7 @@ def minimo(lista):
     validante_de_enteros = True
     while validante_de_enteros:
         try:
-            cantidad = int(input("¿Cuantos valores quiere ingresar? "))
+            cantidad = int(input("¿Cuantos valores quiere en su lista? "))
             if cantidad < 0:
                 cantidad = cantidad * -1
                 print(f"no se aceptan numero negativos, el valor {cantidad*-1} ahora es {cantidad}")
@@ -38,7 +38,7 @@ def minimo(lista):
     print(f"esta es tu lista: {lista}")
     lista.sort()
     print(f"el menor numero en la lista indicada es: {lista[0]}")
-
+    return(lista[0])
     
     
 def maximo(lista):
@@ -47,7 +47,7 @@ def maximo(lista):
     validante_de_enteros = True
     while validante_de_enteros:
         try:
-            cantidad = int(input("¿Cuantos valores quiere ingresar? "))
+            cantidad = int(input("¿Cuantos valores quiere en su lista? "))
             if cantidad < 0:
                 cantidad = cantidad * -1
                 print(f"no se aceptan numero negativos, el valor {cantidad*-1} ahora es {cantidad}")
@@ -73,12 +73,14 @@ def maximo(lista):
     lista.sort()
     lista.reverse()
     print(f"el mayor numero en la lista indicada es: {lista[0]}")
+    return(lista[0])
 
 def prueba():
-    pass
-
-if __name__ == "__main__":
-    prueba()
+    
     minimo("")
     maximo("")
+    
+if __name__ == "__main__":
+    prueba()
+    
     

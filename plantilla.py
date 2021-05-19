@@ -7,7 +7,6 @@
 
 # Reemplazar por las funciones del ejercicio
 
-
 def prueba():
     pass
 

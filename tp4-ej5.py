@@ -23,9 +23,10 @@ def signo(numero):
         print("usted introdujo 0")
 
 def prueba():
-    pass
-
+    
+    signo("")
+    
 if __name__ == "__main__":
     prueba()
-    signo("")
+    
     

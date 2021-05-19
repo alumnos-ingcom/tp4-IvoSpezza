@@ -23,17 +23,17 @@ def compara(numero, otro_numero):
             print("solo valores enteros.")
             
     if numero > otro_numero:
-        print("1")
+        return(1)
     elif numero == otro_numero:
-        print("0")
+        return(0)
     else:
-        print("-1")
+        return(-1)
             
 
 def prueba():
-    pass
-
+      
+    compara("","")
+       
 if __name__ == "__main__":
-    prueba()
-    compara("", "")
+     prueba()
     

@@ -7,7 +7,7 @@
 
 # Reemplazar por las funciones del ejercicio
 
-def convertir_a_fahrrenheit(centigrados):
+def convertir_a_fahrenheit(centigrados):
     validante = True
     
     while validante:
@@ -20,7 +20,8 @@ def convertir_a_fahrrenheit(centigrados):
     fahrenheit = (centigrados * 1.8) + 32
     
     print(f"{centigrados}° centigrados son {fahrenheit}° grados fahrenheit")
-    
+    return(fahrenheit)
+
 def convertir_a_centigrados(fahrenheit):
     validante = True
     
@@ -34,15 +35,13 @@ def convertir_a_centigrados(fahrenheit):
     centigrados = (fahrenheit -32) / 1.8
     
     print(f"{fahrenheit}° grados fahrenheit son {centigrados}° centigrados ")
-    
+    return centigrados
     
 def prueba():
-    eleccion = input("ingrese 1 para transformar centigrados en fahrenheit ingrese 2 para trasnformar fahrenheit en centigrados ")
-    if eleccion == "1":
-        convertir_a_fahrrenheit("")
-    elif eleccion == "2":
-        convertir_a_centigrados("")
     
+    convertir_a_fahrenheit("")
+    convertir_a_centigrados("")
+               
 if __name__ == "__main__":
     prueba()
     
