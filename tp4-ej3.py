@@ -40,6 +40,7 @@ def convertir_a_centigrados(fahrenheit):
 def prueba():
     
     convertir_a_fahrenheit("")
+    
     convertir_a_centigrados("")
                
 if __name__ == "__main__":

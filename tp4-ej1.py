@@ -17,7 +17,6 @@ def ingreso_entero_reintento(mensaje, cantidad_reintentos=5):
         
         try:
             numero_entero = int(numero)
-            print(f"{numero}, Buen numero Geniall!!!!!!!")
             return numero_entero
             break
         
@@ -37,14 +36,12 @@ def ingreso_entero_reintento(mensaje, cantidad_reintentos=5):
 
 
 def ingreso_entero_restringido(mensaje,valor_minimo=0, valor_maximo=10):
-    ciclo = True
-    while ciclo:
-        numero = ingreso_entero_reintento(f"{mensaje},")
-        
-        valor = (numero)
+                
+        valor = ingreso_entero_reintento(f"{mensaje},")  
+
         if valor > valor_minimo and valor < valor_maximo:
             print(f"0 < {valor} < 10")
-            ciclo = False
+
                 
         elif valor < valor_minimo:
             raise IngresoIncorrecto(f"el numero tiene que ser mayor a {valor_minimo}")
@@ -59,8 +56,10 @@ class IngresoIncorrecto(Exception):
     pass
 
 def prueba():
-    ingreso_entero_reintento("ingrese numero entero,")
+    
     ingreso_entero_restringido("ingrese valor entre 0 y 10 ")
+    
+    
 if __name__ == "__main__":
     prueba()
     

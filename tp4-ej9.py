@@ -34,13 +34,13 @@ def es_primo(numero):
             
         
         if numero_dividido == 0:
-            
+            print("false")
             return(False)
             
             validador_primal = False
-    
-        elif contador == numeroP:
             
+        elif contador == numeroP:
+            print("true")
             return(True)
             
             validador_primal = False

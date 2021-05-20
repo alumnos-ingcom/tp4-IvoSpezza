@@ -16,11 +16,11 @@ def signo(numero):
         except ValueError:
             print("valor no utilizable, reintente")
     if numero > 0:
-        print(f"{numero} es positivo")
+        return("+")
     elif numero < 0:
-        print(f"{numero} es negativo")
+        return("-")
     else:
-        print("usted introdujo 0")
+        return(0)
 
 def prueba():
     

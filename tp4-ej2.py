@@ -29,11 +29,14 @@ def suma_lenta(numero, otro_numero):
         suma_lenta = otro_numero
     
     while suma_lenta < resultado:
+        
         print(f"{suma_lenta}")
         suma_lenta += 1
     print(f"{suma_lenta}")
     print("proceso terminado.")
+    
 def prueba():
+    
     suma_lenta("", "")
 
 if __name__ == "__main__":
