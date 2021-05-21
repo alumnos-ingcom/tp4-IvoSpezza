@@ -7,20 +7,9 @@
 
 # Reemplazar por las funciones del ejercicio
 
+from tp4ej1 import ingreso_entero_reintento
+
 def compara(numero, otro_numero):
-    solo_numeros_enteros = True
-    while solo_numeros_enteros:
-        try:
-            
-            numero = int(input("ingrese valor 1: "))
-            
-            otro_numero = int(input("ingrese valor 2: "))
-            
-            solo_numeros_enteros = False
-            
-        except ValueError:
-            
-            print("solo valores enteros.")
             
     if numero > otro_numero:
         return(1)
@@ -32,8 +21,10 @@ def compara(numero, otro_numero):
 
 def prueba():
       
-    compara("","")
-       
+    numero = compara(ingreso_entero_reintento("ingrese un numero entero,"), ingreso_entero_reintento("ingrese otro numero entero,"))
+    
+    print(numero)
+    
 if __name__ == "__main__":
      prueba()
     
