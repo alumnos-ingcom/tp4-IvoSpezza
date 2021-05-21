@@ -36,7 +36,7 @@ def factores_primos(numero):
             
             if factor_primo:
             
-              lista.append(contador)
+                lista.append(contador)
               
         contador += 1
         
