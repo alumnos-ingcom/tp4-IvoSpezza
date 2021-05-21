@@ -7,24 +7,17 @@
 
 # Reemplazar por las funciones del ejercicio
 
+from tp4ej1 import ingreso_entero_reintento
 
 def es_primo(numero):
-    validante = True
-    while validante:
-        try:
-            
-            numero = int(input("Ingrese un numero entero "))
-            validante = False
-        except ValueError:
-            print("error, intente otra vez")
     
-    numeroP = abs(numero)    # numeroP es solo para a la hora de comparar contador con numeroP no tener problema si el usuario ingreso un valor negativo
+    numero = abs(numero)    # numeroP es solo para a la hora de comparar contador con numeroP no tener problema si el usuario ingreso un valor negativo
     contador = 2
     validador_primal = True     
     
     while validador_primal:
         
-        numero_dividido = numeroP
+        numero_dividido = numero
         
         while numero_dividido > 0:
             
@@ -34,13 +27,13 @@ def es_primo(numero):
             
         
         if numero_dividido == 0:
-            print("false")
+            
             return(False)
             
             validador_primal = False
             
-        elif contador == numeroP:
-            print("true")
+        elif contador == numero:
+            
             return(True)
             
             validador_primal = False
@@ -49,7 +42,7 @@ def es_primo(numero):
     
 def prueba():
     
-    es_primo("")
+    es_primo(ingreso_entero_reintento("ingrese un numero entero, comprobaremos si es primo."))
 
 if __name__ == "__main__":
     prueba()
