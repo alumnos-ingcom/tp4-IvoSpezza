@@ -7,14 +7,10 @@
 
 # Reemplazar por las funciones del ejercicio
 
+from tp4ej1 import ingreso_entero_reintento
+
 def signo(numero):
-    numerosiosi = True
-    while numerosiosi:
-        try:
-            numero = int(input("Introduzca un valor negativo o positivo: "))
-            numerosiosi = False
-        except ValueError:
-            print("valor no utilizable, reintente")
+    
     if numero > 0:
         return("+")
     elif numero < 0:
@@ -24,7 +20,11 @@ def signo(numero):
 
 def prueba():
     
-    signo("")
+    numero = ingreso_entero_reintento("Introduzca un valor negativo o positivo: ")
+    
+    signo(numero)
+    
+    print(f" El numero '{numero}' es {signo(numero)}")
     
 if __name__ == "__main__":
     prueba()
