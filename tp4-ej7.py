@@ -7,16 +7,9 @@
 
 # Reemplazar por las funciones del ejercicio
 
+from tp4ej1 import ingreso_entero_reintento
 
 def division_lenta(dividendo, divisor):
-    validante = True
-    while validante:
-        try:
-            dividendo = int(input("ingrese valor a dividir "))
-            divisor = int(input("ingrese divisor "))
-            validante = False
-        except ValueError:
-            print("el valor ingresado debe ser un numero")
     
     cociente = 0
     if dividendo > 0 and divisor < 0 or dividendo < 0 and divisor > 0:
@@ -25,30 +18,33 @@ def division_lenta(dividendo, divisor):
         divisor = abs(divisor)
         
         while resto > 0:
+            print(f"{resto * -1}")
             resto -= divisor
             cociente += 1
-            
+        print(f"{resto * -1}")     
         cociente = -1 * cociente
-        print(f"al dividir '{dividendo}' por '{divisor}', obtenemos como cociente '{cociente}' y como resto '{resto}'")
-        
+        resto= -1 * resto
+        lista = [cociente, resto]
+        return lista
     elif divisor == 0 or dividendo == 0:
         
         print("ERROR FATAL, error al dividir por 0")
         
-    elif dividendo > 0 and divisor > 0:
+    else:
         
-        resto = dividendo
+        resto = abs(dividendo)
+        divisor = abs(divisor)
         while resto > 0:
+            print(f"{resto}")
             resto -= divisor
             cociente += 1
-        print(f"al dividir '{dividendo}' por '{divisor}', obtenemos como cociente '{cociente}' y como resto '{resto}'")
-
+        print(f"{resto}")
+        lista = [cociente, resto]
+        return lista
 
 def prueba():
     
-    division_lenta("","")   
+    division_lenta(ingreso_entero_reintento("ingrese valor a dividir"), ingreso_entero_reintento("ingrese divisor")) 
 
 if __name__ == "__main__":
-    prueba()
-    
-    
+    prueba()   
