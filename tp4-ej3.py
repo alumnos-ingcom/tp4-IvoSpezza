@@ -7,30 +7,35 @@
 
 # Reemplazar por las funciones del ejercicio
 
-def convertir_a_fahrenheit(centigrados):
+
+
+def numerofloat(mensaje):
+
     validante = True
-    
     while validante:
+            
+        numerof = input(mensaje)
         try:
-            centigrados = float(input("ingrese la t° ambiente en centigrados "))
+                
+            numerof = float(numerof)
             validante = False
+            
+            return numerof
+        
         except ValueError:
-            print(f"{centigrados} tiene que ser un numero, reintente")
+            print(f"{numerofloat} tiene que ser un numero, reintente")
+            
+            
+def convertir_a_fahrenheit(centigrados):
+     
     
     fahrenheit = (centigrados * 1.8) + 32
     
     print(f"{centigrados}° centigrados son {fahrenheit}° grados fahrenheit")
-    return(fahrenheit)
+    
+    return fahrenheit
 
 def convertir_a_centigrados(fahrenheit):
-    validante = True
-    
-    while validante:
-        try:
-            fahrenheit = float(input("ingrese la t° ambiente en fahrenheit "))
-            validante = False
-        except ValueError:
-            print(f"{fahrenheit} tiene que ser un numero, reintente")
     
     centigrados = (fahrenheit -32) / 1.8
     
@@ -39,9 +44,9 @@ def convertir_a_centigrados(fahrenheit):
     
 def prueba():
     
-    convertir_a_fahrenheit("")
+    convertir_a_fahrenheit(numerofloat("ingrese un valor en centigrados, se trasformara en fahrenheit "))
     
-    convertir_a_centigrados("")
+    convertir_a_centigrados(numerofloat("ingrese un valor en fahrenheit, se transformara en centigrados "))
                
 if __name__ == "__main__":
     prueba()
