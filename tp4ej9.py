@@ -22,23 +22,18 @@ def es_primo(numero):
         while numero_dividido > 0:
             
             numero_dividido -= contador
-        
-        contador += 1
-            
-        
-        if numero_dividido == 0:
-            
-            return(False)
-            
-            validador_primal = False
-            
-        elif contador == numero:
+              
+        if contador == numero:
             
             return(True)
+        
+        
+        elif numero_dividido == 0:
             
-            validador_primal = False
-    
-    
+            return(False)
+        
+        
+        contador += 1
     
 def prueba():
     
