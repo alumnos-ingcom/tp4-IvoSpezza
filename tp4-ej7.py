@@ -18,33 +18,40 @@ def division_lenta(dividendo, divisor):
         divisor = abs(divisor)
         
         while resto > 0:
-            print(f"{resto * -1}")
+            
             resto -= divisor
             cociente += 1
-        print(f"{resto * -1}")     
+             
         cociente = -1 * cociente
         resto= -1 * resto
         lista = [cociente, resto]
         return lista
     elif divisor == 0 or dividendo == 0:
         
-        print("ERROR FATAL, error al dividir por 0")
+        raise error_de_division("error al dividir por 0")
         
     else:
         
         resto = abs(dividendo)
         divisor = abs(divisor)
         while resto > 0:
-            print(f"{resto}")
+            
             resto -= divisor
             cociente += 1
-        print(f"{resto}")
+        
         lista = [cociente, resto]
         return lista
 
+class error_de_division(Exception):
+    pass
+
 def prueba():
     
-    division_lenta(ingreso_entero_reintento("ingrese valor a dividir"), ingreso_entero_reintento("ingrese divisor")) 
+    cociente_resto = division_lenta\
+                     (ingreso_entero_reintento("ingrese valor a dividir"), \
+                      ingreso_entero_reintento("ingrese divisor")) 
+
+    print(f"el cociente y el resto son {cociente_resto}")
 
 if __name__ == "__main__":
     prueba()   
