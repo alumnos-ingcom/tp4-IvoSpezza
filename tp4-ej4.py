@@ -21,7 +21,9 @@ def compara(numero, otro_numero):
 
 def prueba():
       
-    numero = compara(ingreso_entero_reintento("ingrese un numero entero,"), ingreso_entero_reintento("ingrese otro numero entero,"))
+    numero = compara\
+             (ingreso_entero_reintento("ingrese un numero entero,"), \
+              ingreso_entero_reintento("ingrese otro numero entero,"))
     
     print(numero)
     
