@@ -31,7 +31,7 @@ def convertir_a_fahrenheit(centigrados):
     
     fahrenheit = (centigrados * 1.8) + 32
     
-    print(f"{centigrados}° centigrados son {fahrenheit}° grados fahrenheit")
+    
     
     return fahrenheit
 
@@ -44,9 +44,13 @@ def convertir_a_centigrados(fahrenheit):
     
 def prueba():
     
-    convertir_a_fahrenheit(numerofloat("ingrese un valor en centigrados, se trasformara en fahrenheit "))
+    faherein = convertir_a_fahrenheit(numerofloat("ingrese un valor en centigrados, se trasformara en fahrenheit "))
     
-    convertir_a_centigrados(numerofloat("ingrese un valor en fahrenheit, se transformara en centigrados "))
+    centigradin = convertir_a_centigrados(numerofloat("ingrese un valor en fahrenheit, se transformara en centigrados "))
+    
+    print(f"los centigrados ingreados equivalen a {faherein}° grados fahrenheit")
+    
+    print(f"los fahrenheit ingreados equivalen a {centigradin}° grados centigrados")
                
 if __name__ == "__main__":
     prueba()
