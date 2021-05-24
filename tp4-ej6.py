@@ -45,18 +45,42 @@ def creador_de_listas():
 def minimo(lista):
     
     print(f"esta es tu lista: {lista}")
-    lista.sort()
-    print(f"el menor numero en la lista indicada es: {lista[0]}")
-    return(lista[0])
+    numero_menor = lista[0]
+   
+    for i in lista:
+        if numero_menor > i:
+            numero_menor = i
+                
+            
+            
+        
+    print(f"el menor numero en la lista indicada es: {numero_menor}")
+    
+    
+    return(numero_menor)
+    
+    
+    
     
     
 def maximo(lista):
     
     print(f"esta es tu lista: {lista}")
-    lista.sort()
-    lista.reverse()
-    print(f"el mayor numero en la lista indicada es: {lista[0]}")
-    return(lista[0])
+    
+    
+    numero_mayor = lista[0]
+   
+    for i in lista:
+        if numero_mayor < i:
+            numero_mayor = i
+            
+    print(f"el mayor numero en la lista indicada es: {numero_mayor}")
+    
+    
+    return(numero_mayor)
+
+
+
 
 def prueba():
     
