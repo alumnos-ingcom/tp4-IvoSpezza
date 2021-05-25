@@ -37,9 +37,9 @@ def es_primo(numero):
     
 def prueba():
     
-    valor = es_primo\
-            (ingreso_entero_reintento\
-             ("ingrese un numero entero, comprobaremos si es primo."))
+    numero = ingreso_entero_reintento("ingrese un numero entero, comprobaremos si es primo.")
+    
+    valor = es_primo(numero)
     
     print(valor)
 if __name__ == "__main__":
