@@ -9,8 +9,10 @@
 def es_palindromo(texto):
 
     palindro = list(texto)
-
-    palindro_reverse = palindro.reverse()
+    
+    palindro_reverse = list(texto)
+    
+    palindro_reverse.reverse()
     
     if palindro == palindro_reverse:
         
